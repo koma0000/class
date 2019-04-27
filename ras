@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+class Auto
+{
+private:
+    int S;
+    string sity1,sity2;
+public:
+    void nessage(){
+        cout << "Rastoynie mejdy gorodami" << endl;
+
+    }
+    void set(string gorod_sity1, string gorod_sity2,int gorod_S) {
+     S = gorod_S;
+     sity1 = gorod_sity1;
+     sity2 = gorod_sity2;
+    }
+    void get() {
+        cout << "Rastoyanie : " << sity1 << "-" << sity2 << " " << S << endl;
+    }
+    void vvod()
+    {
+    cout << "Gorod A :" << endl;
+    cin >> sity1;
+    cout << "Gorod B :" << endl;
+    cin >> sity2;
+    cout << "rastoyanie :" << endl;
+    cin >> S ;
+    }
+
+};
+
+int main(int argc,const char * argv[]){
+
+    Auto ras;
+    ras.nessage();
+    ras.vvod();
+    ras.get();
+    ras.set("UFA","MOSCOW",1400);
+    ras.get();
+    cin.get();
+    return 0;
+}
